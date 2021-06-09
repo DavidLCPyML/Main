@@ -1,10 +1,10 @@
 What I knew beforehand:  
-    Some technical knowledge on the topic:  
-        SVM modeling and regression modeling from my DS classes  
-        Heard about Neural Networks and "black box" methods  
-        Rudimentary idea about search algorithms such as A* pathfinding function  
-        Distinction between AI, ML, and Deep Learning ()  
-        USACO Silver/Gold-level algorithmic knowledge  
+* Some technical knowledge on the topic:  
+* SVM modeling and regression modeling from my DS classes  
+* Heard about Neural Networks and "black box" methods  
+* Rudimentary idea about search algorithms such as A* pathfinding function  
+* Distinction between AI, ML, and Deep Learning ()  
+* USACO Silver/Gold-level algorithmic knowledge  
     AI's positives:  
         Massive, far-reaching applications in finance, robotics, computing, and literally every other field.  
         "the Singularity" - some point in time where AI will drastically accelerate human technology/society (thank you Kurzweil, very cool!)  
