@@ -1,5 +1,5 @@
 Just some guy trying to get more serious about coding, high hopes but low skill, oof  
 
 Interests I'm developing:  
-  AI, more specifically how to use and apply it  
-  Competitive programming and algorithmic knowledge  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AI, more specifically how to use and apply it  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Competitive programming and algorithmic knowledge  
