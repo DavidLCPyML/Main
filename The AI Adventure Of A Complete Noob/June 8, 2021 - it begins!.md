@@ -31,11 +31,12 @@
 - finally, resumed Week 2 of Andrew Ng's course "AI For Everyone".
 ## What I now know:
 - I got like zero iq in this subject lmao i gotta start from square one
-- 
-- 
+- Workflow for ML projects: **collect data(audio files, images, spreadsheets, etc.)**-> **train actual model (ML alg. for A2B mapping aka I/O mapping)**-> **Continue training models until satisfactory result** -> **Deploy the model** (will occassionally not work as well as with the training set) -> **Update & maintain model**
+- Workflow for DS projects: **collect data(customer/visitor Public IPs & sites visited)**-> **analyze data(repeat until good results)**-> **distill results to hypotheses and actions**-> **deploy model (making changes to account for new data**
+- ML and DS are beginning to affect many job functions as they get more optimized
 ## What’s next on the list:
-- 
-- 
-- 
+- pick the first AI project
+- set up the software environment/IDE for it
+- continue week 2 of "AI For Everyone"(starting on video 4, "Every job function needs to learn how to use data").
 ## Interesting tidbits:
 - 
