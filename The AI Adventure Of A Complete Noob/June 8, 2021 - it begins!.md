@@ -26,14 +26,16 @@
 - quite advanced in Natural Language Processing
 ## What I did:  
 - Explored possible AI projects a beginner could perform, such as __home price predictions__, __Social media analysis/fraud detection with the Enron database__, __Customer Recommendations__, and even a __Chatbot__. 
-- Explored platforms I could build AI projects in
-
+- Other projects include a __"Machine Learning Gladiator" project__, __Sports Analysis__, __Stock predictions__, __handwriting recognition__, __game AI__, and even __building my own ML algorithm__.  
+- Explored platforms I could build AI projects in, such as __Visual Studio__ or __Jetbrains__; not enough info to choose
+- finally, resumed Week 2 of Andrew Ng's course "AI For Everyone".
 ## What I now know:
+- I got like zero iq in this subject lmao i gotta start from square one
 - 
-
-
+- 
 ## What’s next on the list:
-
-
-
+- 
+- 
+- 
 ## Interesting tidbits:
+- 
