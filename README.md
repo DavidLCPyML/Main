@@ -10,4 +10,4 @@ You can click the Preview link to take a look at your changes.
 --->
 
 
-Just some guy trying to get more serious about coding, high hopes but low skill, lol
+Just some guy trying to get more serious about coding, high hopes but low skill, oof
