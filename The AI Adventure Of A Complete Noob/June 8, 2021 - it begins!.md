@@ -25,8 +25,8 @@
 - Terrible at being general (i.e. identifying a dog with the cat-identifying algorithm even though people can tell the difference quite easily)  
 - quite advanced in Natural Language Processing
 ## What I did:  
-- 
-
+- Explored possible AI projects a beginner could perform, such as __home price predictions__, __Social media analysis/fraud detection with the Enron database__, __Customer Recommendations__, and even a __Chatbot__. 
+- Explored platforms I could build AI projects in
 
 ## What I now know:
 - 
