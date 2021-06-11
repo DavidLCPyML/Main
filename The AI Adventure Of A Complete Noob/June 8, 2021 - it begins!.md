@@ -38,5 +38,3 @@
 - pick the first AI project
 - set up the software environment/IDE for it
 - continue week 2 of "AI For Everyone"(starting on video 4, "Every job function needs to learn how to use data").
-## Interesting tidbits:
-- 
