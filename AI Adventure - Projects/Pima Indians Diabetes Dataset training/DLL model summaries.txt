@@ -1,0 +1,6 @@
+Trial 1: 77.21, 32s
+Trial 2: 77.60, 30s
+Trial 3: 78.12, 31s
+Trial 4: 75.52, 32s
+Trial 5: 73.96, 41s
+Avg: 76.48, 33s
