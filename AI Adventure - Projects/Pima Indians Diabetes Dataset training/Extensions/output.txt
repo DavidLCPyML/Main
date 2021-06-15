@@ -1,0 +1,5 @@
+24/24 [==============================] - 0s 2ms/step - loss: 0.4963 - accuracy: 0.7669
+Accuracy: 76.69
+Saved model to disk
+Loaded model from disk
+accuracy: 76.69%
