@@ -1,6 +1,7 @@
 # load and evaluate a saved model
 from numpy import loadtxt
 from keras.models import load_model
+from keras.utils.vis_utils import plot_model
 
 # load model
 model = load_model('model.h5')
