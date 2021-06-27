@@ -88,7 +88,7 @@ fplt.plot(
             volume=True,
             #figratio = (72,48),
             ylabel_lower='Shares\nTraded',
-            #show_nontrading=True
+            #show_nontrading=True <- doesn't have this param
             )
 
 #df = pd.read_csv('STOCK_EXTENDED.csv')
@@ -99,55 +99,3 @@ fplt.plot(
 #                close=df['close'])])
 #fig.update_layout(xaxis_rangeslider_visible=False)
 #fig.show()
-
-
-############                             CREATE DATASET                              ############
-def create_dataset(df):
-    x = []
-    y = []
-    for i in range(50, df.shape[0]):
-        x.append(df[i-50:i, 0])
-        y.append(df[i, 0])
-    x = np.array(x)
-    y = np.array(y)
-    return x,y
-
-
-############                                DATA PROCESSING                                  ############
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
-from keras.models import Sequential, load_model
-from keras.layers import LSTM, Dense, Dropout
-
-# obtain train off high values
-df = pd.read_csv('STOCK_EXTENDED.csv')
-df.head()
-df = df['high'].values
-df = df.reshape(-1, 1)
-#print(df.shape)
-#df[:5]
-
-#split into train-test datasets
-WINDOW = 50
-train_test_split = 0.8
-dataset_train = np.array(df[:int(df.shape[0]*train_test_split)])
-dataset_test = np.array(df[int(df.shape[0]*train_test_split)-WINDOW:])
-
-# scale data to fit btwn range 0 and 1, then create input/output train-test sets
-scaler = MinMaxScaler(feature_range=(0,1))
-dataset_train = scaler.fit_transform(dataset_train)
-dataset_test = scaler.transform(dataset_test)
-x_train, y_train = create_dataset(dataset_train)
-x_test, y_test = create_dataset(dataset_test)
-#print(dataset_train.shape)
-#print(dataset_test.shape)
-#dataset_train[:5]
-#dataset_test[:5]
-#x_train[:1]
-#x_test[:1]
-
-# Reshape features for LSTM Layer
-x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
-x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
