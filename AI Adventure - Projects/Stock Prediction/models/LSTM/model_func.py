@@ -85,7 +85,6 @@ predictions = model.predict(x_test)
 predictions = scaler.inverse_transform(predictions)
 print(predictions)
 
-
 fig, ax = plt.subplots(figsize=(8,4))
 plt.plot(stock_listing, label="Actual Price")
 ax.plot(range(len(y_train)+WINDOW,len(y_train)+WINDOW+len(predictions)),predictions, color='red', label='Predicted Price')
