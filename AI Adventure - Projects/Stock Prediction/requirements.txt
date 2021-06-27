@@ -1,0 +1,3 @@
+!pip install alpha_vantage
+!pip install requests
+!pip install mplfinance
