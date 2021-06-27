@@ -20,4 +20,6 @@ https://towardsdatascience.com/what-happened-when-i-tried-market-prediction-with
 https://www.datacamp.com/community/tutorials/lstm-python-stock-market
 
 ## Conclusion
-Stock prediction with LSTMs, as many people found previously, was not very accurate. Resulting measurements of the accuracies yielded high MSE and Mean Absolute Percentage Error.  
+Stock prediction with LSTMs, as many people found previously, was not very accurate. Resulting measurements of the accuracies yielded high MSE and Mean Absolute Percentage Error.  On average, the **mean absolute percentage error (MAPE) tended to be quite high**, and on average the predicted values were at least 10% lower than the actual values seen.  
+The model was further complicated with its inability to predict consistently a high and low value, as sometimes the predicted low would be higher than the predicted high. Furthermore, in the real-world stock market, there are many companies, each with different "factors and laws" governing their stock prices, which a model today simply cannot predict.  
+Ostensibly, with a 
