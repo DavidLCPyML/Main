@@ -1,5 +1,5 @@
 ############                                PREDICT FUTURE VALUES                                  ############
-
+# kinda broken, can only 'predict'(forecast terribly lol) 1 hour ahead :P
 stock_quote = pd.read_csv('STOCK_EXTENDED.csv')
 #create new dataframe
 new_df = stock_quote.filter(['high'])
