@@ -3,20 +3,27 @@
 https://coderzcolumn.com/tutorials/data-science/candlestick-chart-in-python-mplfinance-plotly-bokeh 
 ##### How to build a model for stock prediction
 https://keras.io/api/optimizers/ - keras optimizers
+<br/>
 https://keras.io/api/losses/ - keras loss functions
 
 ##### Data Loading
 https://www.alphavantage.co/documentation/ - AlphaVantage API
+<br/>
 https://algotrading101.com/learn/alpha-vantage-guide/ - AlphaVantage tutorial
+<br/>
 
 ##### Plots
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html
 
 ##### Theory
 https://www.kdnuggets.com/2018/11/keras-long-short-term-memory-lstm-model-predict-stock-prices.html
+<br/>
 https://towardsdatascience.com/lstm-time-series-forecasting-predicting-stock-prices-using-an-lstm-model-6223e9644a2f
+<br/>
 https://towardsdatascience.com/is-it-possible-to-predict-stock-prices-with-a-neural-network-d750af3de50b
+<br/>
 https://towardsdatascience.com/what-happened-when-i-tried-market-prediction-with-machine-learning-4108610b3422
+<br/>
 https://www.datacamp.com/community/tutorials/lstm-python-stock-market
 
 ## Conclusion
