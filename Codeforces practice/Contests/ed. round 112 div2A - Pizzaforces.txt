@@ -1,0 +1,45 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+void solve() {
+    long long num;
+    cin >> num;
+
+    if (num < 6) {
+        cout << "15" << endl;
+        return;
+    }
+
+    if (num % 2 == 0) {
+        cout << num * 5 / 2 << endl;
+    }
+    else {
+        cout << (num + 1) * 5 / 2 << endl;
+    }
+}
+
+vector<pair<int,int>> points;
+
+int main() {
+    int n;
+    cin >> n;
+
+    
+    while(n--) {
+        solve();
+    }
+    
+
+    
+
+    return 0;
+}
+
+/*
+Sample Input:
+
+*/

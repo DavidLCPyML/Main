@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	
+	while (n--) {
+		int xa, ya;
+		int xb, yb;
+		int xf, yf;
+		cin >> xa >> ya >> xb >> yb >> xf >> yf;
+
+		int sp = 0;
+		if (xa == xb && (yf > ya && yf < yb) && xf == xa) {
+			cout << abs(yb - ya) + 2 << endl;
+		}
+		else if (xa == xb && (yf < ya && yf > yb) && xf == xa) {
+			cout << abs(yb - ya) + 2 << endl;
+		}
+		else if (ya == yb && (xf > xa && xf < xb) && yf == ya) {
+			cout << abs(xb - xa) + 2 << endl;
+		}
+		else if (ya == yb && (xf < xa && xf > xb) && yf == ya) {
+			cout << abs(xb - xa) + 2 << endl;
+		}
+		else {
+			cout << abs(xb - xa) + abs(yb - ya) << endl;
+		}
+	}
+	return 0;
+}

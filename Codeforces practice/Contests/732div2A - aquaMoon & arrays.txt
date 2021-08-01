@@ -1,0 +1,76 @@
+#include <iostream>
+#include <vector>
+#include <stack>
+using namespace std;
+
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(NULL);
+
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+
+        vector<int> a, b;
+        for (int i = 0; i < n; i++) {
+            int num;
+            cin >> num;
+            a.push_back(num);
+        }
+        for (int i = 0; i < n; i++) {
+            int num;
+            cin >> num;
+            b.push_back(num);
+        }
+
+
+        //store differences for later processing
+        vector<int> delta;
+        int sum = 0, diff = 0;
+
+        //ignore equal comparisons
+        for (int i = 0; i < n; i++) {
+            if (a[i] > b[i]) {
+                sum += a[i] - b[i];
+                delta.push_back(a[i] - b[i]);
+            }
+            else {
+                diff += b[i] - a[i];
+                delta.push_back(b[i] - a[i]);
+            }
+        }
+
+
+        //sum and diff must be equal for it to work (since there must be eqeual + and -)
+        if (sum != diff) {
+            cout << "-1" << endl;
+        } else {
+            stack<int> i_pos;
+            stack<int> j_pos;
+
+            for (int i = 0; i < n; i++) {
+                if (a[i] > b[i]) {
+                    for (int j = 0; j < delta[i]; j++) {
+                        i_pos.push(i + 1);
+                    }
+                }
+                else {
+                    for (int j = 0; j < delta[i]; j++) {
+                        j_pos.push(i + 1);
+                    }
+                }
+            }
+
+            cout << sum << endl;
+            for (int i = 0; i < sum; i++) {
+                cout << i_pos.top() << " " << j_pos.top() << endl;
+                j_pos.pop(), i_pos.pop();
+            }
+        }
+    }
+
+    return 0;
+}
