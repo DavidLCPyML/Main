@@ -1,0 +1,57 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+void solve() {
+
+}
+
+int main() {
+    //int n, k;
+    //cin >> n >> k;
+    
+    /*
+    while(n--) {
+        solve(k);
+    }
+    */
+    
+    int n;
+    cin >> n;
+    vector<int> left, right;
+
+    int leftzero = 0;  int leftone = 0;
+    int rightzero = 0; int rightone = 0;
+
+    for (int i = 0; i < n; i++) {
+        int temp1, temp2;
+        cin >> temp1 >> temp2;
+        
+        if (temp1 == 1) {
+            leftone++;
+        } else {
+            leftzero++;
+        }
+
+        if (temp2 == 1) {
+            rightone++;
+        }
+        else {
+            rightzero++;
+        }
+
+        left.push_back (temp1);
+        right.push_back(temp2);
+    }
+
+    cout << min(leftone, leftzero) + min(rightone, rightzero) << endl;
+
+    return 0;
+}
+
+/*
+Sample Input:
+
+*/

@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+int solve(int n) {
+    int currlength = 0;
+    int currmax = 0;
+    int newnum;
+    int oldnum = 0;
+    for (int i = 0; i < n; i++) {
+        cin >> newnum;
+        if (newnum >= oldnum) {
+            currlength++;
+            if (currlength > currmax) {
+                currmax = currlength;
+            }
+        } else {
+            currlength = 1;
+        }
+        oldnum = newnum;
+    }
+    return currmax;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    
+    cout << solve(n);
+    return 0;
+}

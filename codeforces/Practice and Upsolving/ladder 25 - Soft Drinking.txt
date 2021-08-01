@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+void solve() {
+
+}
+
+int main() {
+    //int n, k;
+    //cin >> n >> k;
+    
+    /*
+    while(n--) {
+        solve(k);
+    }
+    */
+    
+    int n, k, l, c, d, p, nl, np;
+    cin >> n >> k >> l >> c >> d >> p >> nl >> np;
+
+    int drink_toastings = k * l / nl;
+    int lime_toastings = c * d;
+    int salt_toastings = p / np;
+
+    cout << min(min(drink_toastings, lime_toastings), salt_toastings) / n << endl;
+
+    return 0;
+}
+
+/*
+Sample Input:
+
+*/

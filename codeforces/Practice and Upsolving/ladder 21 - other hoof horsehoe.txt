@@ -1,0 +1,40 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+void solve() {
+
+}
+
+int main() {
+    //int n, k;
+    //cin >> n >> k;
+    
+    /*
+    while(n--) {
+        solve(k);
+    }
+    */
+    
+    vector<int> numbers(4);
+    for (int i = 0; i < 4; i++) {
+        cin >> numbers[i];
+    }
+
+    //sort(numbers.begin(), numbers.end());
+    //numbers.erase(unique(numbers.begin(), numbers.end()), numbers.end());
+    set<int> s(numbers.begin(), numbers.end());
+    numbers.assign(s.begin(), s.end());
+
+    cout << 4 - numbers.size() << endl;
+
+    return 0;
+}
+
+/*
+Sample Input:
+
+*/

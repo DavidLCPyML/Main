@@ -1,0 +1,44 @@
+#include<iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+void solve(string s) {
+    size_t pos = std::string::npos;
+    string toErase = "WUB";
+    while ((pos = s.find("WUB")) != std::string::npos) {
+        // If found then erase it from string
+        s.replace(pos, 3, " ");
+    }
+    
+	int i = 0;
+	while (s[i++] == ' ');
+	s.erase(0, i - 1);
+
+	i = s.size() - 1;
+	while (s[i--] == ' ');
+	i += 2;
+	s.erase(i, s.size() - i);
+
+
+	for (i = 0; i < s.size(); ++i) {
+		if (s[i] != ' ')
+			cout << s[i];
+		else if (s[i] == ' ' && s[i + 1] == ' ') {
+			cout << ' ';
+			++i;
+		}
+		else {
+			cout << ' ';
+		}
+	}
+
+}
+
+int main() {
+    string s;
+    cin >> s;
+    
+    solve(s);
+    return 0;
+}
