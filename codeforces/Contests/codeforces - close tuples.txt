@@ -1,0 +1,64 @@
+﻿#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <tuple>
+using namespace std;
+
+/*
+In the easy version of the problem, you can count how many times each number occurs (the numbers themselves do not exceed n). 
+    Note that we do not have very many options for which triples of numbers can be included in the answer.
+
+Let's iterate over x – the minimum number in the triples. 
+    Then there are the following options:
+        [x, x+1, x+2];
+        [x, x+1, x+1];
+        [x, x+2, x+2];
+        [x, x, x+1];
+        [x, x, x+2];
+        [x, x, x].
+In each option, you need to multiply the number of ways to choose one, two or three numbers from all occurrences of this number. This is done using binomial coefficients. 
+    Formally, if cnt[x] — is the number of occurrences of the number x, then the formulas corresponding to the options in the list above are as follows:
+        1.  cnt[x]⋅cnt[x+1]⋅cnt[x+2];
+        2.  cnt[x]⋅(cnt[x+1]⋅(cnt[x+1]−1))/2;
+        3.  cnt[x]⋅(cnt[x+2]⋅(cnt[x+2]−1))/2;
+        4.  (cnt[x]⋅(cnt[x]−1))/2⋅cnt[x+1];
+        5.  (cnt[x]⋅(cnt[x]−1))/2⋅cnt[x+2];
+        6.  (cnt[x]⋅(cnt[x]−1)⋅(cnt[x]−2))/6.
+If we sum these values over all x from 1 to n, then we get the answer to the problem.
+*/
+
+int main() {
+    int tests;
+    cin >> tests;
+    while (tests--) {
+        int n;
+        cin >> n;
+        vector<long long> cnt(n + 1);
+        for (int i = 0; i < n; i++) {
+            int x;
+            cin >> x;
+            cnt[x]++;
+        }
+        long long ans = 0;
+        for (int i = 2; i < n; i++) {
+            ans += cnt[i - 1] * cnt[i] * cnt[i + 1];
+        }
+        for (int i = 1; i < n; i++) {
+            ans += cnt[i] * (cnt[i] - 1) / 2 * cnt[i + 1];
+        }
+        for (int i = 2; i <= n; i++) {
+            ans += cnt[i - 1] * cnt[i] * (cnt[i] - 1) / 2;
+        }
+        for (int i = 2; i < n; i++) {
+            ans += cnt[i - 1] * cnt[i + 1] * (cnt[i + 1] - 1) / 2;
+        }
+        for (int i = 2; i < n; i++) {
+            ans += cnt[i + 1] * cnt[i - 1] * (cnt[i - 1] - 1) / 2;
+        }
+        for (int i = 1; i <= n; i++) {
+            ans += cnt[i] * (cnt[i] - 1) * (cnt[i] - 2) / 6;
+        }
+        cout << ans << "\n";
+    }
+    return 0;
+}

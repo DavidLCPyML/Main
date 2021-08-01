@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	int N;
+	cin >> N;
+	vector<int> carrots(N,0);
+
+	for (int i = 0; i < N; i++) {
+		int size;
+		cin >> carrots[i];
+	}
+
+	int rabbit1 = 1;
+	for (int i = 1; i < N; i++) {
+		if (carrots[i] >= carrots[i - 1]) {
+			rabbit1++;
+		} else {
+			break;
+		}
+	}
+
+	int rabbit2 = 1;
+	for (int i = N - 2; i >= 0; i--) {
+		if (carrots[i] >= carrots[i + 1]) {
+			rabbit2++;
+		} else {
+			break;
+		}
+	}
+
+	cout << min(N, rabbit1 + rabbit2) << endl;
+	return 0;
+}

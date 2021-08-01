@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+void solve() {
+
+}
+
+int main() {
+    //int n, k;
+    //cin >> n >> k;
+    
+    /*
+    while(n--) {
+        solve(k);
+    }
+    */
+    
+    string eq;
+    cin >> eq;
+
+    vector<int> numbers;
+    for (int i = 0; i < eq.size(); i++) {
+        if (eq[i] != '+') {
+            numbers.push_back(eq[i] - '0');
+        }
+    }
+    sort(numbers.begin(), numbers.end());
+
+    for (int i = 0; i < numbers.size() - 1; i++) {
+        cout << numbers[i] << "+";
+    }
+    cout << numbers[numbers.size() - 1];
+
+    return 0;
+}
+
+/*
+Sample Input:
+
+*/

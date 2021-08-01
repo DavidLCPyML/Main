@@ -1,0 +1,35 @@
+#include <iostream>
+#include <set>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+void checkdistinct(string s) {
+    
+}
+
+int main() {
+    //int n, k;
+    //cin >> n >> k;
+    
+    int year;
+    cin >> year;
+
+    for (int i = year+1; i <= 9012; i++) {
+        string s = to_string(i);
+        set<int> uniDigits(s.begin(), s.end());
+        if (s.length() == uniDigits.size()) {
+            cout << i << endl;
+            break;
+        }
+    }
+    
+    
+    
+    return 0;
+}
+
+/*
+Sample Input:
+
+*/

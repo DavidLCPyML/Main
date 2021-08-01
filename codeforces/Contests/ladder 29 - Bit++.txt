@@ -1,0 +1,45 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+void solve() {
+
+}
+
+int main() {
+    //int n, k;
+    //cin >> n >> k;
+
+    /*
+    while(n--) {
+        solve(k);
+    }
+    */
+
+    int statements;
+    cin >> statements;
+    int ans = 0;
+
+    while (statements--) {
+        string c;
+        cin >> c;
+
+        if (c == "++X" || c == "X++") {
+            ans++;
+        }
+        if (c == "--X" || c == "X--") {
+            ans--;
+        }
+    }
+    cout << ans << endl;
+
+    return 0;
+}
+
+/*
+Sample Input:
+
+*/

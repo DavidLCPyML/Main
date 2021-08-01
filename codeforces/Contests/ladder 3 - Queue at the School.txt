@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+void solve() {
+
+}
+
+int main() {
+    int n, k;
+    cin >> n >> k;
+    
+    string s;
+    cin >> s;
+    
+    string new_line = s;
+    for (int i = 0; i < k; i++) {
+        for (int j = 0; j < n - 1; j++) {
+            if (s[j] == 'B' && s[j + 1] == 'G') {
+                new_line[j + 1] = s[j    ];
+                new_line[j    ] = s[j + 1];
+            }
+        }
+        s = new_line;
+        //cout << new_line << endl;
+    }
+    //cout << endl;
+    cout << s << endl;
+
+    return 0;
+}
+
+/*
+Sample Input:
+
+*/
