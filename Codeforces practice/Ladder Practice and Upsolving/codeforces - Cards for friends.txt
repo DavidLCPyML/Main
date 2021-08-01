@@ -1,0 +1,38 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+long long int countsquares(int w, int h) {
+	long long int squares = 1;
+	while (w % 2 == 0) {
+		w /= 2;
+		squares *= 2;
+	}
+	while (h % 2 == 0) {
+		h /= 2;
+		squares *= 2;
+	}
+
+	return squares;
+}
+
+
+int main() {
+	int t;
+	cin >> t;
+
+	while (t--) {
+		int w, h, n;
+		cin >> w >> h >> n;
+
+		if (countsquares(w, h) >= n) {
+			cout << "yes" << endl;
+		} else{
+				cout << "no" << endl;
+		}
+	}
+
+	return 0;
+}

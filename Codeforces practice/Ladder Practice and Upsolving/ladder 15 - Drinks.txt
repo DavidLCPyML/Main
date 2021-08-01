@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+void solve() {
+
+}
+
+int main() {
+    //int n, k;
+    //cin >> n >> k;
+    
+    /*
+    while(n--) {
+        solve(k);
+    }
+    */
+    
+    int n;
+    cin >> n;
+    vector<int> line(n);
+    
+    int sum = 0;
+    for (int i = 0; i < n; i += 1) {
+        cin >> line[i];
+        sum += line[i];
+    }
+
+    //cout << sum << endl;
+    double quotient = (double)sum / (double)n;
+    cout.precision(10);
+    cout << fixed << quotient << endl;
+
+    return 0;
+}
+
+/*
+Sample Input:
+
+*/

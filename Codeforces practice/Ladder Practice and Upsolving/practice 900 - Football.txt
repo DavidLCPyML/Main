@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string a;
+    cin >> a;
+    int b[1000];
+    b[0] = 1;
+    
+    for (int i = 1; i < a.size(); i++) {
+        if (a[i] == a[i - 1])
+            b[i] = b[i - 1] + 1;
+        else
+            b[i] = 1;
+        if (b[i] == 7) {
+            cout << "YES";
+            break;
+        }
+        if (i == a.size() - 1 && b[i] != 7)
+            cout << "NO";
+    }
+    
+    return 0;
+}

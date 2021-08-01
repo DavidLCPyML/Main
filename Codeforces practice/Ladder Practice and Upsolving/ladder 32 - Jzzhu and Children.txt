@@ -1,0 +1,55 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+void solve() {
+
+}
+
+int main() {
+    //int n, k;
+    //cin >> n >> k;
+
+    /*
+    while(n--) {
+        solve(k);
+    }
+    */
+
+    int n, m;
+    cin >> n >> m;
+
+    vector<int> loops(n);
+    for (int i = 0; i < n; i++) {
+        cin >> loops[i];
+
+        loops[i] = loops[i] / m + (loops[i] % m != 0);
+        //cout << loops[i] << " ";
+        //loops[i] = loops[i] / m;
+        //cout << loops[i] << endl;
+    }
+
+    int max = -1;
+    int maxpos = 0;
+    for (int i = 0; i < loops.size(); i++) {
+        //cout << loops[i] << endl;
+        if (loops[i] >= max) {
+            max = loops[i];
+            maxpos = i;
+
+            //cout << max << " ";
+        }
+    }
+
+    cout << maxpos+1 << endl;
+
+    return 0;
+}
+
+/*
+Sample Input:
+
+*/
