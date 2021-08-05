@@ -1,0 +1,65 @@
+(1599, 12)
+fixed acidity           float64
+volatile acidity        float64
+citric acid             float64
+residual sugar          float64
+chlorides               float64
+free sulfur dioxide     float64
+total sulfur dioxide    float64
+density                 float64
+pH                      float64
+sulphates               float64
+alcohol                 float64
+quality                   int64
+dtype: object
+    fixed acidity  volatile acidity  citric acid  ...  sulphates  alcohol  quality
+1             7.4              0.70         0.00  ...       0.56      9.4        5
+2             7.8              0.88         0.00  ...       0.68      9.8        5
+3             7.8              0.76         0.04  ...       0.65      9.8        5
+4            11.2              0.28         0.56  ...       0.58      9.8        6
+5             7.4              0.70         0.00  ...       0.56      9.4        5
+6             7.4              0.66         0.00  ...       0.56      9.4        5
+7             7.9              0.60         0.06  ...       0.46      9.4        5
+8             7.3              0.65         0.00  ...       0.47     10.0        7
+9             7.8              0.58         0.02  ...       0.57      9.5        7
+10            7.5              0.50         0.36  ...       0.80     10.5        5
+
+[10 rows x 12 columns]
+       fixed acidity  volatile acidity  ...      alcohol      quality
+count    1599.000000       1599.000000  ...  1599.000000  1599.000000
+mean        8.319637          0.527821  ...    10.422983     5.636023
+std         1.741096          0.179060  ...     1.065668     0.807569
+min         4.600000          0.120000  ...     8.400000     3.000000
+25%         7.100000          0.390000  ...     9.500000     5.000000
+50%         7.900000          0.520000  ...    10.200000     6.000000
+75%         9.200000          0.640000  ...    11.100000     6.000000
+max        15.900000          1.580000  ...    14.900000     8.000000
+
+[8 rows x 12 columns]
+quality
+3     10
+4     53
+5    681
+6    638
+7    199
+8     18
+dtype: int64
+0.653125
+[[  0   0   1   0   0   0]
+ [  0   1   8   4   0   0]
+ [  0   3 108  21   8   0]
+ [  0   0  40  83   9   2]
+ [  0   1   4   9  16   0]
+ [  0   0   0   0   1   1]]
+              precision    recall  f1-score   support
+
+         3.0       0.00      0.00      0.00         1
+         4.0       0.20      0.08      0.11        13
+         5.0       0.67      0.77      0.72       140
+         6.0       0.71      0.62      0.66       134
+         7.0       0.47      0.53      0.50        30
+         8.0       0.33      0.50      0.40         2
+
+    accuracy                           0.65       320
+   macro avg       0.40      0.42      0.40       320
+weighted avg       0.64      0.65      0.64       320
