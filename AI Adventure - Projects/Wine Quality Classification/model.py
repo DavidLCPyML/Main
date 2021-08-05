@@ -15,26 +15,33 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
-
+...
 # Load dataset
 url = "winequality-red-test.csv"
 names = ['fixed acidity','volatile acidity','citric acid','residual sugar','chlorides','free sulfur dioxide','total sulfur dioxide','density','pH','sulphates','alcohol','quality']
 dataset = read_csv(url, names=names)
-#remove the first row (contains duplicate feature descriptions)
-dataset = dataset[1:]
 
+# correct/clean/normalize the inputted data
+dataset = dataset[1:]
+dataset = dataset.astype(float)
+dataset.quality = dataset.quality.astype(int)
+
+# ensure everything is in order
+'''
 print(dataset.shape)
+print(dataset.dtypes)
 print(dataset.head(10))
 print(dataset.describe())
 print(dataset.groupby('quality').size())
+'''
 
-#plot relationships (TODO)
-#dataset.plot(kind = 'box', subplots=True, layout = (2,2), sharex=False,sharey=False)
-#show(dataset.plot)
-#dataset.hist()
-#scatter_matrix(dataset)
+# visualize intercolumnal relationships
+'''
+dataset.plot(kind = 'box', subplots=True, layout = (4,4), sharex=False,sharey=False, figsize=(10,10))
+dataset.hist(figsize=(10,10))
+scatter_matrix(dataset, figsize = (20,20))
+'''
 
-# split into train-test/validation pairs)
 array = dataset.values
 X = array[:,0:11]
 y = array[:,11]
@@ -54,18 +61,25 @@ models.append(('SVM', SVC(gamma='auto')))
 results = []
 names = []
 for name,model in models:
-	kfold = StratifiedKFold(n_splits=8, random_state=1, shuffle=True)
+	kfold = StratifiedKFold(n_splits=3, random_state=1, shuffle=True)
 	cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy')
 	results.append(cv_results)
 	names.append(name)
-	print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
+	#print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
 
 # using DTree Classifications since it scored the highest
 model = DecisionTreeClassifier()
 model.fit(X_train, Y_train)
 predictions = model.predict(X_validation)
 
-# check accuracy of model's predictions
+# look at diagnostics
 print(accuracy_score(Y_validation, predictions))
-print(confusion_matrix(Y_validation, predictions))
+#print(confusion_matrix(Y_validation, predictions))
 print(classification_report(Y_validation, predictions))
+
+'''
+fig = pyplot.figure(figsize =(10, 10))
+pyplot.boxplot(results, labels=names)
+pyplot.title('Comparisons')
+pyplot.show()
+'''
