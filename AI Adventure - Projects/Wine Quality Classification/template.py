@@ -18,15 +18,15 @@ from sklearn.svm import SVC
 
 ...
 # Load dataset
-url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
+url = ""
+names = []
 dataset = read_csv(url, names=names)
 
 
 print(dataset.shape)
 print(dataset.head(10))
 print(dataset.describe())
-print(dataset.groupby('class').size())
+print(dataset.groupby('x').size())
 
 #dataset.plot(kind = 'box', subplots=True, layout = (2,2), sharex=False,sharey=False)
 #show(dataset.plot)
