@@ -7,7 +7,7 @@
 -  Sometimes data needs to be "fixed"/"realigned" so the interpreter can read the data correctly
   - On the first try, the imported csv squashed all the columns together in one
   - The second try it duplicated the top row, causing the graphs to not plot correctly (no-numeric-data-to-plot error)
-  - Fixed by cutting off the top by doing the '''dataset=dataset[:1]''' code
+  - Fixed by cutting off the top by doing the dataset=dataset[:1] code
   - Further processing was needed, such as changing datatypes to fit the problem requirements
 - 
 ## What’s next on the list:
