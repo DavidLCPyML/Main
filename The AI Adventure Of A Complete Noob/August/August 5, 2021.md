@@ -11,12 +11,12 @@
   - Fixed by cutting off the top by adding the "dataset=dataset[:1]" line of code
   - Sometimes **datatype modification is also necessary**, such as changing datatypes to fit the problem requirements
 - Box-and-whisker plots will usually show clumps of "outliers" depending on the type of distribution
-  - The plots with fewest clumps indicate that the data is as close as possible to the perfect uniform normal distribution.
-        - in essence, boxplots don't indicate outliers so much as they indicate the shape of the distribution.
   - Some plots were relatively **uniformly normally distributed and thus had less outlier clumps**, i.e. citric acid, quality, and alcohol
   - One plot, density, followed a **normal distribution (clumps on both sides)**
   - Other plots, such as Residual sugar, chlorides, sulphates, and the rest to some degree had pretty **heavy clumps on one side, indicating a moderately/heavily skewed distribution.**
   - **Histograms also functioned similarly**, depicting how skewed each feature was distributed.
+- The plots with fewest clumps indicate that the data is as close as possible to the perfect uniform normal distribution.
+  - in essence, boxplots don't indicate outliers so much as they indicate the shape of the distribution.
 - Sometimes you need to perform multiple analyses to figure out the best algorithm to use for a certain problem
   - ex: Using the 6-ish most simple classifiers (logreg, dtree, KNN, SVM, LDA/linreg, and Naive Bayes/GaussianNB) to generate grouped performance and pick the best
         - Sometimes, more complex models can/will be necessary such as NNs (of course assuming it's SL and not USL/SSL)
