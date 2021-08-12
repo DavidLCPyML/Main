@@ -1,0 +1,61 @@
+loading and initial model test:
+
+(60000, 28, 28)   (60000,)
+(10000, 28, 28)   (10000,)
+<class 'numpy.ndarray'>   <class 'numpy.ndarray'>
+<class 'numpy.ndarray'>   <class 'numpy.ndarray'>
+(60000, 784)
+(10000, 784)
+[7 2 3 ... 0 8 5]
+(60000,)
+<class 'numpy.ndarray'>
+[7 2 3 ... 0 8 5]
+{0: 8, 1: 6, 2: 0, 3: 9, 4: 1, 5: 7, 6: 2, 7: 3, 8: 6, 9: 7}
+[3 0 9 1 7 2 1 8 1 7 3 1 3 6 1 7 2 8 6 7]
+[5 0 4 1 9 2 1 3 1 4 3 5 3 6 1 7 2 8 6 9]
+0.5794833333333334
+
+
+
+
+cluster testing:
+
+Clusters: 10
+Inertia: 2368472.75
+Homogeneity: 0.49507541796257537
+Accuracy: 0.5978333333333333
+
+
+Clusters: 16
+Inertia: 2225326.5
+Homogeneity: 0.5752073689701536
+Accuracy: 0.6632666666666667
+
+
+Clusters: 36
+Inertia: 1968793.375
+Homogeneity: 0.6677841714165301
+Accuracy: 0.7369
+
+
+Clusters: 64
+Inertia: 1810795.75
+Homogeneity: 0.7381880900403681
+Accuracy: 0.8095666666666667
+
+
+Clusters: 144
+Inertia: 1630488.875
+Homogeneity: 0.8025948328523809
+Accuracy: 0.8574
+
+
+Clusters: 256
+Inertia: 1514947.25
+Homogeneity: 0.8438730989895329
+Accuracy: 0.9016166666666666
+
+
+Non-set prediction test:
+[7.]
+Accuracy: 0.5794833333333334
