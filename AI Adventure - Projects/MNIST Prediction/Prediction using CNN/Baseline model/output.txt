@@ -1,0 +1,13 @@
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+11493376/11490434 [==============================] - 0s 0us/step
+11501568/11490434 [==============================] - 0s 0us/step
+(60000, 28, 28)   (60000,)
+(10000, 28, 28)   (10000,)
+<class 'numpy.ndarray'>   <class 'numpy.ndarray'>
+<class 'numpy.ndarray'>   <class 'numpy.ndarray'>
+
+0.9859166741371155
+0.9878333210945129
+0.9857500195503235
+0.987583339214325
+0.9881666898727417
