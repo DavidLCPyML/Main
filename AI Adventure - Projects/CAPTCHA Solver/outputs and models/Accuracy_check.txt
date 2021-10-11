@@ -1,0 +1,10 @@
+1409/1409 [==============================] - 19s 14ms/step - loss: 0.0066 - digit0_loss: 0.0010 - digit1_loss: 0.0021 - digit2_loss: 0.0023 - digit3_loss: 0.0012 - digit0_accuracy: 0.9971 - digit1_accuracy: 0.9953 - digit2_accuracy: 0.9938 - digit3_accuracy: 0.9972
+Train loss:     0.002636
+Train accuracy: 98.34
+157/157 [==============================] - 2s 14ms/step - loss: 0.0343 - digit0_loss: 0.0054 - digit1_loss: 0.0106 - digit2_loss: 0.0121 - digit3_loss: 0.0062 - digit0_accuracy: 0.9356 - digit1_accuracy: 0.8943 - digit2_accuracy: 0.8837 - digit3_accuracy: 0.9314
+Test loss:     0.013706
+Test accuracy: 68.86
+
+Saving rW9T.png to rW9T (1).png
+User uploaded file "rW9T.png" with length 8090 bytes
+rW9T
