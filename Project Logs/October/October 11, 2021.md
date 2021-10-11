@@ -15,8 +15,8 @@
     - The paper proposes that if we are able to ensure the distribution of nonlinearities remains stable, then we would be able to use faster learning rates, allowing us to reach convergence quicker. 
 - The authors claim that while whitening layers (i.e. setting weights to 0 each layer) would work, ultimately it opens the can of worms regarding the exploding gradient as that ignores the dependence of the weighted sum on the bias, causing no change in loss but ever increasing bias (meaning exploding gradient).
     - Instead, they propose that we normalize activations to a normal distribution, allowing us to parameterize the mean and variance.
-    - This works since the mini-batches produce estimates of the distribution of each activation, of which the mean and stdev can be optimized to best fit ideal activations.
-- \hat{x}_{i} = \frac{x_{i} - \mu_{\mathcal{B}}}{\sqrt{\sigma^{2}_{\mathcal{B}}+\epsilon}}
+    - This works since the mini-batches produce estimates of the distribution of each activation, of which the mean and stdev can be optimized to best fit ideal activations, as seen in the equations provided in the paper:
+- ![BN](https://user-images.githubusercontent.com/89279052/136846422-bc521835-4b1f-4721-b287-02050c29d223.png)
     - Therefore, we only need to use GD to optimize gamma and beta, allowing for reduced ICS and faster training.
 - Findings included:
     - BN makes the use of sigmoid or tanh activation now viable
