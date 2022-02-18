@@ -5,5 +5,5 @@ Interests I'm developing:
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Competitive programming and algorithmic knowledge  
 UPDATE 2/17/2022:
 Participated in Google-sponsored AI/ML contest "TensorFlow - Help Protect the Great Barrier Reef". Results:
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Obtained a bronze medal for placing in the top 10% of 2026 teams.
+  \n Obtained a bronze medal for placing in the top 10% of 2026 teams.
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Placed 117th on the private test set, with an F2 score of 0.677 on the final model submission.
