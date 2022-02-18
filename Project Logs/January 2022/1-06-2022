@@ -1,0 +1,40 @@
+# Overview of today: 
+## What I did:  
+Explored Pytorch and the implementations. There's not a lot of stuff TF can do, at least not in Keras, which is what I've been maining this entire time. 
+Sucks, but there's nothing I can do except learn how to use Pytorch.  
+So, Torch it is!  
+- It's not too tragic, since they both use Python to process the data, something which I've been doing decently so far.
+- So it seems upon further research that TF/Keras is more for industry grade solutions, compared to Pytorch which revolves more around research/SoTA.
+- This seems to be further confirmed by the fact that almost all of the notebooks I see on Kaggle are in Pytorch. Hmm.
+- The main differences I see here, is the way the layers are defined and models loaded.
+    - TF uses model.load("something.h5"), or a related file containing the weight and layer information. Pytorch saves the models in a checkpoint file with ending ".pt" or ".pth".
+    - Also the big killer, at least for CV-related challenges: THERE IS NO TIMM, which is used in apparently every image model (at least the pytorch versions).
+    - Another killer - doesn't support indexing, meaning that some augmentation techniques are unfeasible, according to some peeps.
+    - TF's model definitions are quite different from keras's, but I don't think I'm experienced enough to roll that out just yet, 
+    so I'll ignore that since it seems that you can just load SoTA model repos in through commands, so long as they exist.
+- Found Pytorch implementations for many models I thought about, such as swin, DETR, YOLO, etc.
+    - Another nice library: MMDET, contains a bunch of models(mostly R-CNN variants), some of which I've never seen before (Cascade R-CNN? What?)
+    - Didn't realize we're on our fifth-gen YOLO. Interesting!
+    - So, we have our hands full - YOLO, Swin, DETR, R-CNN, GAN etc.
+    - Likely the goto is YOLO, since that's the one I'm most familiar with(at least architecturally).
+## What I now know:
+- TF is the goto for robust implementations, but apparently it's a pain to debug and write with. Probably not up my lane, at least until I can grasp AI/ML better.
+    - Features more of a library format, where you have to define weights & biases for each layer.
+    - How do I write transformers in TF? Scratch that, I haven't even implemented GANs in TF!
+- Pytorch is preferred for bleeding-edge/fast implementation & high performance. Also newer, but seems to be very popular now.
+    - No access to Tensorboard, meaning that I can't see my layers and other model activations.
+    - However, pytorch seems to use Weights & Biases "wandb", which allows you to see validation labels/metric graphs/confusion matrices/etc.
+- Loading these models is just as simple as a torch.load definition. Training seems to be done via a command to run a training python file.
+    - To be fair to TF, that can also be done there as well.
+## What’s next on the list:
+- Read up on code documentation for the models mentioned above (SWIN, DETR, YOLO, etc.).
+    - See if training parameters or even the model architectures themselves can be tweaked.
+    - Train up some models, and test them out.
+    - Determine how and what to cross-validate.
+    - Figure out how to port finished models for inferencing. I don't want to have to retrain each time I submit, since that would be too tragic and a waste of my GPU time.
+## Interesting tidbits/thoughts:
+- TF requires a lot of "boilerplate" code since it's a pure library, but Pytorch provides you with a high-level wrapper to run such harnesses.
+- R-CNNs are still considered SoTA! I was certain everyone switched to Darknet models and transformers!
+- YOLOv5 is a Pytorch mirror, doesn't look like there's a TF library of the same name. Made by Ultrlytics, the same peeps who wrote a YOLOv3 implementation.
+## Data/Resources
+- none here, most of this is my opinion, so don't @ me haha
